@@ -102,6 +102,37 @@
           }
         }
       }
+    },
+    "nx-rainnier123xy-lib": {
+      "projectType": "library",
+      "root": "projects/nx-rainnier123xy-lib",
+      "sourceRoot": "projects/nx-rainnier123xy-lib/src",
+      "prefix": "nx",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/nx-rainnier123xy-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/nx-rainnier123xy-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/nx-rainnier123xy-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/nx-rainnier123xy-lib/src/test.ts",
+            "tsConfig": "projects/nx-rainnier123xy-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/nx-rainnier123xy-lib/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }
